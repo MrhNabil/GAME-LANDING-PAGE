@@ -1,6 +1,8 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
 }
 
 .section-title {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -37,22 +39,19 @@ body {
     font-size: 18px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
     color: #ffffff;
     background-color: #f948b2;
     border-radius: 50px;
     padding: 15px 30px;
     text-transform: uppercase;
     border: 0;
+    cursor: pointer;
 }
 
 .btn-secondary {
-    color: #ffffff;
     background-color: #4ec5f7;
-    border-radius: 50px;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    border: 0;
 }
 
 .text-center {
@@ -228,7 +227,7 @@ header nav ul div {
     transition: 0.3s ease-in-out;
 }
 
-.videos-section .videos .video .overlay:hover {
+.videos-section .videos .video:hover .overlay {
     opacity: 1;
 }
 
@@ -260,15 +259,20 @@ header nav ul div {
     color: #ffffff;
     padding: 60px 0;
 }
+
 .careers-section {
     display: flex;
 }
+
 .careers-section .career-dic {
     padding: 30px 0;
 }
+
 .careers-section .career-list {
     display: flex;
-} 
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 /* GAME SECTION START */
 .games-section {
@@ -282,20 +286,26 @@ header nav ul div {
     justify-content: center;
 }
 
-.games-section .games .game {
+.games-section .game {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5px;
     padding: 15px;
     margin: 20px;
     border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.games-section .games .game:hover {
-    border: 1px solid #f948b2;
-    border-radius: 50px;
+.games-section .game:hover {
+    border-color: #f948b2;
+    background-color: #f948b23b;
     color: #f948b2;
+}
+
+.games-section .game h5 {
+    font-size: 1rem;
 }
 
 /* FOOTER SECTION START */
@@ -361,27 +371,6 @@ footer .link p {
     text-align: center;
 }
 
-footer nav ul a {
-    font-size: 12px;
-    text-align: center;
-}
-
-footer .link {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 40px 25px;
-}
-
-footer .link p {
-    font-size: 12px;
-    text-align: center;
-}
-
-footer nav ul a {
-    font-size: 12px;
-    text-align: center;
-}
-
 /* MEDIA QUERY */
 /* Mobile responsive design */
 @media screen and (max-width: 576px) {
@@ -411,14 +400,6 @@ footer nav ul a {
         text-transform: uppercase;
         font-size: 60px;
         font-weight: 800;
-    }
-
-    .banner-text {
-        order: 2;
-    }
-
-    .banner-img {
-        order: 1;
     }
 
     /* GAMER SECTION */
@@ -516,15 +497,10 @@ footer nav ul a {
         font-size: 12px;
         text-align: center;
     }
-
-    footer nav ul a {
-        font-size: 12px;
-        text-align: center;
-    }
 }
 
 /* Laptop responsive design */
-@media only screen and (max-width: 768px) and (min-width: 576px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
     /* header section */
     header nav {
         padding: 0px 15px;
